@@ -95,6 +95,34 @@ VAR
 //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // M10
 	
+	// X Mot
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[XMOT-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[XMOT-EL7041]^STM Status^Status^Digital input 1'}
+	{attribute 'pytmc' := '
+		pv: TMO:LAMP:MMS:11
+	'}
+	
+	M11	    : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION);
+	
+	// Y MOT
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YMOT-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[YMOT-EL7041]^STM Status^Status^Digital input 1'}
+	{attribute 'pytmc' := '
+		pv: TMO:LAMP:MMS:12
+	'}
+	M12	    : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION);
+	
+	// Z MOT
+		{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZMOT-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[ZMOT-EL7041]^STM Status^Status^Digital input 1'}
+	{attribute 'pytmc' := '
+		pv: TMO:LAMP:MMS:13
+	'}
+	M13	    : DUT_MotionStage := (bPowerSelf:=TRUE,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION);
+	
 	fbMotionStageM1	: FB_MotionStage;
 	fbMotionStageM2	: FB_MotionStage;
 	fbMotionStageM3	: FB_MotionStage;
@@ -104,7 +132,11 @@ VAR
 	fbMotionStageM7	: FB_MotionStage;
 	fbMotionStageM8	: FB_MotionStage;
 	fbMotionStageM9	: FB_MotionStage;
-	fbMotionStageM10	: FB_MotionStage;
+	fbMotionStageM10 : FB_MotionStage;
+	fbMotionStageM11 : FB_MotionStage;
+	fbMotionStageM12 : FB_MotionStage;
+	fbMotionStageM13 : FB_MotionStage;
+	
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[// Hardware Enable
@@ -123,6 +155,16 @@ M6.bHardwareEnable	:= TRUE;
 	
 //Extra
 M10.bHardwareEnable	:= TRUE;
+
+// In Air Manipulator LAMP MOTION
+M11.bHardwareEnable := TRUE;
+M12.bHardwareEnable := TRUE;
+M13.bHardwareEnable := TRUE;
+
+fbMotionStageM11(stMotionStage:=M11);
+fbMotionStageM12(stMotionStage:=M12);
+fbMotionStageM13(stMotionStage:=M13);
+
 	
 // fbMotionStage
 // Gas Jet
