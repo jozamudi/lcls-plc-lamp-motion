@@ -85,11 +85,11 @@ VAR
     '}
 	M9  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle Z
 	
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 2'}
-	{attribute 'pytmc' := '
-		pv: TMO:LAMP:MMS:10
-    '}
+//	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 1;
+//                             .bLimitBackwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 2'}
+//	{attribute 'pytmc' := '
+//		pv: TMO:LAMP:MMS:10
+//    '}
 //	M10  	: DUT_MotionStage := (bPowerSelf:=TRUE,
 //    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
@@ -98,9 +98,7 @@ VAR
 	// X Mot
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[XMOT-EL7041]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable:=TIIB[XMOT-EL7041]^STM Status^Status^Digital input 1'}
-	{attribute 'pytmc' := '
-		pv: TMO:LAMP:MMS:11
-	'}
+	{attribute 'pytmc' := 'pv: TMO:LAMP:MMS:11'}
 	
 	M11	    : DUT_MotionStage := (bPowerSelf:=TRUE,
     nEnableMode:=ENUM_StageEnableMode.DURING_MOTION);
@@ -108,18 +106,14 @@ VAR
 	// Y MOT
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YMOT-EL7041]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable:=TIIB[YMOT-EL7041]^STM Status^Status^Digital input 1'}
-	{attribute 'pytmc' := '
-		pv: TMO:LAMP:MMS:12
-	'}
+	{attribute 'pytmc' := 'pv: TMO:LAMP:MMS:12'}
 	M12	    : DUT_MotionStage := (bPowerSelf:=TRUE,
     nEnableMode:=ENUM_StageEnableMode.DURING_MOTION);
 	
 	// Z MOT
-		{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZMOT-EL7041]^STM Status^Status^Digital input 2;
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZMOT-EL7041]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable:=TIIB[ZMOT-EL7041]^STM Status^Status^Digital input 1'}
-	{attribute 'pytmc' := '
-		pv: TMO:LAMP:MMS:13
-	'}
+	{attribute 'pytmc' := 'pv: TMO:LAMP:MMS:13'}
 	M13	    : DUT_MotionStage := (bPowerSelf:=TRUE,
     nEnableMode:=ENUM_StageEnableMode.DURING_MOTION);
 	
