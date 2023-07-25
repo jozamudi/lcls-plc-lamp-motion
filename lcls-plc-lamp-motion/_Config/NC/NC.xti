@@ -24,9 +24,9 @@
 		<Axis File="GasNeedleZ.xti" Id="6"/>
 		<Axis File="SamplePaddleX.xti" Id="7"/>
 		<Axis File="SamplePaddleY.xti" Id="8"/>
-		<Axis File="ManX.xti" Id="14"/>
-		<Axis File="ManY.xti" Id="15"/>
-		<Axis File="ManZ.xti" Id="16"/>
+		<Axis File="TIXELX.xti" Id="14"/>
+		<Axis File="TIXELY.xti" Id="15"/>
+		<Axis File="TIXELZ.xti" Id="16"/>
 		<Axis File="SamplePaddleZ.xti" Id="9"/>
 		<Axis File="FlowCellX.xti" Id="10"/>
 		<Axis File="FlowCellY.xti" Id="11"/>

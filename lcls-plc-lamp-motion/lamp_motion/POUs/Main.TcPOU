@@ -95,24 +95,25 @@ VAR
 //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
 //    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // M10
 	
-	// X Mot
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[XMOT-EL7041]^STM Status^Status^Digital input 2;
-                              .bLimitBackwardEnable:=TIIB[XMOT-EL7041]^STM Status^Status^Digital input 1'}
+	// TIXEL 
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[TIXELX-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[TIXELX-EL7041]^STM Status^Status^Digital input 1'}
 	{attribute 'pytmc' := 'pv: TMO:LAMP:MMS:11'}
 	
-	M11	    : DUT_MotionStage := (bPowerSelf:=TRUE);
+	M11	    : DUT_MotionStage := (bPowerSelf:=TRUE); // TIXEL X
 	
-	// Y MOT
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YMOT-EL7041]^STM Status^Status^Digital input 2;
-                              .bLimitBackwardEnable:=TIIB[YMOT-EL7041]^STM Status^Status^Digital input 1'}
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[TIXELY-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[TIXELY-EL7041]^STM Status^Status^Digital input 1'}
 	{attribute 'pytmc' := 'pv: TMO:LAMP:MMS:12'}
-	M12	    : DUT_MotionStage := (bPowerSelf:=TRUE);
+	M12	    : DUT_MotionStage := (bPowerSelf:=TRUE); // TIXEL Y
 	
-	// Z MOT
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZMOT-EL7041]^STM Status^Status^Digital input 2;
-                              .bLimitBackwardEnable:=TIIB[ZMOT-EL7041]^STM Status^Status^Digital input 1'}
+	
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[TIXELZ-EL7041]^STM Status^Status^Digital input 2;
+                              .bLimitBackwardEnable:=TIIB[TIXELZ-EL7041]^STM Status^Status^Digital input 1'}
 	{attribute 'pytmc' := 'pv: TMO:LAMP:MMS:13'}
-	M13	    : DUT_MotionStage := (bPowerSelf:=TRUE);
+	M13	    : DUT_MotionStage := (bPowerSelf:=TRUE); // TIXEL Z
+	
 	
 	fbMotionStageM1	: FB_MotionStage;
 	fbMotionStageM2	: FB_MotionStage;
