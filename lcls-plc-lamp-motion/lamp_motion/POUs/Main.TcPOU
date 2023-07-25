@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Main" Id="{6f4a6b61-6bc5-4c57-90c1-877a33915112}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM Main
 VAR
@@ -64,25 +64,25 @@ VAR
 //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
     nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // Gas Needle Z
 
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 1^Input;
-                              .bLimitBackwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 2^Input'}
-	{attribute 'pytmc' := '
-		pv: TMO:LAMP:MMS:07
-	'}
-	M7  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle X
-
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 4^Input;
-                              .bLimitBackwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 3^Input'}
-	{attribute 'pytmc' := '
-		pv: TMO:LAMP:MMS:08
-	'}
-	M8  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle Y
-
-	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleZ-EL1084]^Channel 1^Input;
-                              .bLimitBackwardEnable:=TIIB[SamplePaddleZ-EL1084]^Channel 2^Input'}
-	{attribute 'pytmc' := '
-		pv: TMO:LAMP:MMS:09
-    '}
+//	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 1^Input;
+//                              .bLimitBackwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 2^Input'}
+//	{attribute 'pytmc' := '
+//		pv: TMO:LAMP:MMS:07
+//	'}
+//	M7  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle X
+//
+//	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 4^Input;
+//                              .bLimitBackwardEnable:=TIIB[SamplePaddleXY-EL1084]^Channel 3^Input'}
+//	{attribute 'pytmc' := '
+//		pv: TMO:LAMP:MMS:08
+//	'}
+//	M8  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle Y
+//
+//	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[SamplePaddleZ-EL1084]^Channel 1^Input;
+//                              .bLimitBackwardEnable:=TIIB[SamplePaddleZ-EL1084]^Channel 2^Input'}
+//	{attribute 'pytmc' := '
+//		pv: TMO:LAMP:MMS:09
+//    '}
 	M9  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle Z
 	
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 1;
