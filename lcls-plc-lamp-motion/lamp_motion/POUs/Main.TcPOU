@@ -85,15 +85,15 @@ VAR
     '}
 	M9  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle Z
 	
-//	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 1;
-//                             .bLimitBackwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 2'}
-//	{attribute 'pytmc' := '
-//		pv: TMO:LAMP:MMS:10
-//    '}
-//	M10  	: DUT_MotionStage := (bPowerSelf:=TRUE,
-//    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 1;
+                             .bLimitBackwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 2'}
+	{attribute 'pytmc' := '
+		pv: TMO:LAMP:MMS:10
+    '}
+	M10  	: DUT_MotionStage := (bPowerSelf:=TRUE,
+    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
-//    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // M10
+    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // M10
 	
 	// TIXEL 
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[TIXELX-EL7041]^STM Status^Status^Digital input 2;
@@ -124,7 +124,7 @@ VAR
 	fbMotionStageM7	: FB_MotionStage;
 	fbMotionStageM8	: FB_MotionStage;
 	fbMotionStageM9	: FB_MotionStage;
-	//fbMotionStageM10 : FB_MotionStage;
+	fbMotionStageM10 : FB_MotionStage;
 	fbMotionStageM11 : FB_MotionStage;
 	fbMotionStageM12 : FB_MotionStage;
 	fbMotionStageM13 : FB_MotionStage;
