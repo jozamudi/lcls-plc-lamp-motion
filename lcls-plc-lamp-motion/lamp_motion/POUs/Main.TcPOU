@@ -100,22 +100,19 @@ VAR
                               .bLimitBackwardEnable:=TIIB[XMOT-EL7041]^STM Status^Status^Digital input 1'}
 	{attribute 'pytmc' := 'pv: TMO:LAMP:MMS:11'}
 	
-	M11	    : DUT_MotionStage := (bPowerSelf:=TRUE,
-    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION);
+	M11	    : DUT_MotionStage := (bPowerSelf:=TRUE);
 	
 	// Y MOT
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[YMOT-EL7041]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable:=TIIB[YMOT-EL7041]^STM Status^Status^Digital input 1'}
 	{attribute 'pytmc' := 'pv: TMO:LAMP:MMS:12'}
-	M12	    : DUT_MotionStage := (bPowerSelf:=TRUE,
-    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION);
+	M12	    : DUT_MotionStage := (bPowerSelf:=TRUE);
 	
 	// Z MOT
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[ZMOT-EL7041]^STM Status^Status^Digital input 2;
                               .bLimitBackwardEnable:=TIIB[ZMOT-EL7041]^STM Status^Status^Digital input 1'}
 	{attribute 'pytmc' := 'pv: TMO:LAMP:MMS:13'}
-	M13	    : DUT_MotionStage := (bPowerSelf:=TRUE,
-    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION);
+	M13	    : DUT_MotionStage := (bPowerSelf:=TRUE);
 	
 	fbMotionStageM1	: FB_MotionStage;
 	fbMotionStageM2	: FB_MotionStage;
@@ -126,7 +123,7 @@ VAR
 	fbMotionStageM7	: FB_MotionStage;
 	fbMotionStageM8	: FB_MotionStage;
 	fbMotionStageM9	: FB_MotionStage;
-	fbMotionStageM10 : FB_MotionStage;
+	//fbMotionStageM10 : FB_MotionStage;
 	fbMotionStageM11 : FB_MotionStage;
 	fbMotionStageM12 : FB_MotionStage;
 	fbMotionStageM13 : FB_MotionStage;
