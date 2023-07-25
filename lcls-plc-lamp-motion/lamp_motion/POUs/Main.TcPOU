@@ -83,7 +83,7 @@ VAR
 //	{attribute 'pytmc' := '
 //		pv: TMO:LAMP:MMS:09
 //    '}
-	M9  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle Z
+//	M9  	: DUT_MotionStage := (bPowerSelf:=TRUE); // Sample Paddle Z
 	
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 1;
                              .bLimitBackwardEnable:=TIIB[GasNeedleX-EL7041]^STM Status^Status^Digital input 2'}
