@@ -90,10 +90,10 @@ VAR
 	{attribute 'pytmc' := '
 		pv: TMO:LAMP:MMS:10
     '}
-	M10  	: DUT_MotionStage := (bPowerSelf:=TRUE,
-    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
+//	M10  	: DUT_MotionStage := (bPowerSelf:=TRUE,
+//    nEnableMode:=ENUM_StageEnableMode.DURING_MOTION,
 //    nEnableMode:=ENUM_StageEnableMode.ALWAYS,
-    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // M10
+//    nHomingMode := ENUM_EpicsHomeCmd.ABSOLUTE_SET); // M10
 	
 	// X Mot
 	{attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[XMOT-EL7041]^STM Status^Status^Digital input 2;
