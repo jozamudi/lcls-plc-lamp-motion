@@ -13,7 +13,7 @@
 		<Box File="X1 VacuumMotion (EK1100).xti" Id="18">
 			<EtherCAT PortABoxInfo="#x01000011"/>
 		</Box>
-		<Box File="LAMP Motion (EK1100).xti" Id="62">
+		<Box File="TIXEL Detector (EK1100).xti" Id="62">
 			<EtherCAT PortABoxInfo="#x01000005"/>
 		</Box>
 	</Box>
