@@ -121,9 +121,9 @@ VAR
 	fbMotionStageM4	: FB_MotionStage;
 	fbMotionStageM5	: FB_MotionStage;
 	fbMotionStageM6	: FB_MotionStage;
-	fbMotionStageM7	: FB_MotionStage;
-	fbMotionStageM8	: FB_MotionStage;
-	fbMotionStageM9	: FB_MotionStage;
+	//fbMotionStageM7	: FB_MotionStage;
+	//fbMotionStageM8	: FB_MotionStage;
+	//fbMotionStageM9	: FB_MotionStage;
 	fbMotionStageM10 : FB_MotionStage;
 	fbMotionStageM11 : FB_MotionStage;
 	fbMotionStageM12 : FB_MotionStage;
@@ -146,7 +146,7 @@ M6.bHardwareEnable	:= TRUE;
 //M9.bHardwareEnable	:= TRUE;
 	
 //Extra
-//M10.bHardwareEnable	:= TRUE;
+M10.bHardwareEnable	:= TRUE;
 
 // In Air Manipulator LAMP MOTION
 M11.bHardwareEnable := TRUE;
@@ -173,7 +173,7 @@ fbMotionStageM6(stMotionStage:=M6);
 //fbMotionStageM9(stMotionStage:=M9);
 	
 //Extra
-//fbMotionStageM10(stMotionStage:=M10);
+fbMotionStageM10(stMotionStage:=M10);
 
 ]]></ST>
     </Implementation>
