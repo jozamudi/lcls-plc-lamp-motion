@@ -154,7 +154,7 @@ M6.bHardwareEnable	:= TRUE;
 //M9.bHardwareEnable	:= TRUE;
 	
 //Extra
-M10.bHardwareEnable	:= TRUE;
+//M10.bHardwareEnable	:= TRUE;
 
 // In Air Manipulator LAMP MOTION
 M11.bHardwareEnable := TRUE;
@@ -181,7 +181,7 @@ fbMotionStageM6(stMotionStage:=M6);
 //fbMotionStageM9(stMotionStage:=M9);
 	
 //Extra
-fbMotionStageM10(stMotionStage:=M10);
+//fbMotionStageM10(stMotionStage:=M10);
 
 ]]></ST>
     </Implementation>
